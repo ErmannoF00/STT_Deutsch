@@ -1,6 +1,6 @@
 ## DOCTOR-AI HELP GUI
 
-![Doctor-AI Help GUI](img/doctor-ai-help.png)
+![Doctor-AI Help GUI](code/img/doctor-ai-help.png)
 
 ### Description
 
