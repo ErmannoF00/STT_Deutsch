@@ -20,14 +20,17 @@ The **Doctor-AI Help GUI** is a tool designed to assist doctors in evaluating tr
 
 	.
 	├── GUI/
+
 	│   ├── GUI_Controller.py      
 	│   ├── GUI_Transcriber.py         
 	│   ├── Audio_recorder.py        
-	│   ├── Recording_Popup.py      
+	│   ├── Recording_Popup.py
+    
 	|── img/                       
 	│   │   ├── background.png      
 	│   │   ├── doctor-ai-help.png    
-	│   │   └── exit.png             
+	│   │   └── exit.png
+            
 	├── main.GUIpy                    
 	├── requirements.txt       
 	└── README.md                
