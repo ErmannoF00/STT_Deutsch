@@ -17,8 +17,6 @@ The **Doctor-AI Help GUI** is a tool designed to assist doctors in evaluating tr
 	- Play Files: Play selected audio files.
 	- Save File Transcription: Save transcriptions of selected files to individual text files.
 	- Edit Transcription: Edit transcriptions of selected files.
-
-	.
 	├── GUI/
 
 	│   ├── GUI_Controller.py      
