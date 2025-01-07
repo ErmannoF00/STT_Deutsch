@@ -1,0 +1,7 @@
+numpy==1.21.0
+vosk==0.3.30
+spacy==3.0.6
+PyQt5==5.15.4
+jiwer==2.2.0
+silero
+torchmetrics==0.7.2
