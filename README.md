@@ -1,79 +1,110 @@
-## DOCTOR-AI HELP GUI
+# Doctor-AI Help GUI
 
 ![Doctor-AI Help GUI](code/img/doctor-ai-help.png)
 
-### Description
+## Overview
 
-The **Doctor-AI Help GUI** is a tool designed to assist doctors in evaluating transcriptions of audio recordings. This graphical user interface allows users to view, modify, play, and save transcriptions. It supports both local file transcriptions and live transcription from recorded audio. The GUI integrates features for recording audio, editing transcriptions, and saving them in appropriate directories.
+**Doctor-AI Help GUI** is an interactive tool designed to assist doctors in evaluating and managing transcriptions of clinical audio recordings. The application offers both **live audio transcription** and **file-based transcription**, with support for recording, playback, editing, and saving transcripts.
 
+Built with an intuitive interface, the GUI integrates the **Vosk speech recognition model**, enabling offline transcription workflows tailored for medical professionals.
 
-### Features
-- **Live** Transcription:
-	- Click Record Audio to start recording. Click again to stop.
-	- Save Live Transcription: Save the live transcription to a text file.
-	- Edit Transcription: Edit the live transcription text.
-- **Local** Transcription:
-	- Click Select File to choose audio files for transcription.
-	- Play Files: Play selected audio files.
-	- Save File Transcription: Save transcriptions of selected files to individual text files.
-	- Edit Transcription: Edit transcriptions of selected files.
-	├── GUI/
+---
 
-	│   ├── GUI_Controller.py      
-	│   ├── GUI_Transcriber.py         
-	│   ├── Audio_recorder.py        
-	│   ├── Recording_Popup.py
-    
-	|── img/                       
-	│   │   ├── background.png      
-	│   │   ├── doctor-ai-help.png    
-	│   │   └── exit.png
-            
-	├── main.GUIpy                    
-	├── requirements.txt       
-	└── README.md                
+## Key Features
 
-### Setup
+### 🔴 Live Transcription
+- **Record Audio**: Start/stop recording with a single button.
+- **Edit Transcription**: Modify live transcription output before saving.
+- **Save Transcription**: Export transcribed text to a `.txt` file.
 
-1. **Clone the Repository**
-    ```sh
-    git clone https://git-ce.rwth-aachen.de/teamdb/speech-to-text.git
-    cd speech-to-text
-    ```
-   
-2. **Install Dependencies:**
-    ```sh
-    pip install -r requirements.txt
-    ```
-	
-3. **Download Required Models:**
-	Download the Vosk model suitable for your language from the Vosk models page: https://alphacephei.com/vosk/models.
-	Ensure the model path is correctly set in the GUI_Controller.py file.
+### 📁 Local File Transcription
+- **Select Audio File**: Choose existing audio files for transcription.
+- **Playback Support**: Play the selected audio before or after transcription.
+- **Edit Transcription**: Make adjustments to the transcribed output.
+- **Save File Transcription**: Export each transcription to its own `.txt` file.
 
-4. **Run**
-    ```sh
-    python mainGUI.py
-    ```    
------------------------------------------------------------------------------
-## VOSK INFERENCE
+---
 
-To compute the average Word Error Rate (WER) of the Vosk model on a random audio folder of your dataset, follow these steps:
+## 🗂 Project Structure
 
-1. **Setup Audio Folder:**
-   Prepare a folder containing audio files for transcription.
+```
+├── GUI/
+│   ├── GUI_Controller.py       # Main logic and UI controls
+│   ├── GUI_Transcriber.py      # Vosk transcription backend
+│   ├── Audio_recorder.py       # Audio recording module
+│   └── Recording_Popup.py      # Popup UI for recording
+│
+├── img/
+│   ├── background.png
+│   ├── doctor-ai-help.png
+│   └── exit.png
+│
+├── mainGUI.py                  # Main entry point for the GUI
+├── requirements.txt            # Required Python packages
+└── README.md                   # This file
+```
 
-2. **Run Inference:**
-   Modify the script in `main_testing_vosk.py` to point to your audio folder.
-   Run the script to calculate the average WER.
+---
 
-3. **View Results:**
-   The script will output the average WER of the Vosk model on your audio dataset.
+## ⚙️ Setup Instructions
 
-#### Contributions
+### 1. Clone the Repository
 
-Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
+```bash
+git clone https://git-ce.rwth-aachen.de/teamdb/speech-to-text.git
+cd speech-to-text
+```
 
-#### License
+### 2. Install Dependencies
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+```bash
+pip install -r requirements.txt
+```
 
+### 3. Download the Vosk Model
+
+- Visit [https://alphacephei.com/vosk/models](https://alphacephei.com/vosk/models)
+- Download the language model that fits your needs.
+- Update the model path in `GUI_Controller.py` accordingly.
+
+### 4. Run the GUI
+
+```bash
+python mainGUI.py
+```
+
+---
+
+## Vosk Inference & Evaluation
+
+You can evaluate the performance of the Vosk model using Word Error Rate (WER) on your dataset.
+
+### Steps:
+
+1. **Prepare Dataset**
+   - Organize your dataset in a folder with audio files.
+
+2. **Edit Inference Script**
+   - Modify `main_testing_vosk.py` to point to your audio directory.
+
+3. **Run Inference**
+   ```bash
+   python main_testing_vosk.py
+   ```
+
+4. **Output**
+   - The script will display the **average WER** for your dataset.
+
+---
+
+## Contributions
+
+Contributions are welcome!  
+Feel free to fork the repository, work on improvements or features, and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the `LICENSE` file for more details.
