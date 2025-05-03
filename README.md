@@ -1,4 +1,4 @@
-# Doctor-AI Help GUI
+<h1 align="center"> Doctor-AI Help GUI </h1>
 
 ![Doctor-AI Help GUI](code/img/doctor-ai-help.png)
 
