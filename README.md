@@ -1,6 +1,6 @@
 <h1 align="center"> Doctor-AI Help GUI </h1>
 
-![Doctor-AI Help GUI](img/doctor-ai-help.png)
+![Doctor-AI Help GUI](code/img/doctor-ai-help.png)
 
 ### Description
 
@@ -41,8 +41,8 @@ The **Doctor-AI Help GUI** is a tool designed to assist doctors in evaluating tr
 
 1. **Clone the Repository**
     ```bash
-    git clone https://git-ce.rwth-aachen.de/teamdb/speech-to-text.git
-    cd speech-to-text
+    git clone https://github.com/ErmannoF00/STT_Deutsch.git
+    cd STT_Deutsch
     ```
 
 2. **Install Dependencies**
